@@ -17,31 +17,18 @@ class IndexTest extends DOMTestCase
     public function testTagContent()
     {
 
-        $selector = 'h1.title';
-        $content  = 'Test title text';
+        $selector = 'div.intro-heading';
+        $content  = 'DIE ANTWOORD';
 
         $this->assertSelectEquals($selector, $content, true, $this->html);
     }
 
-    public function testClassContent()
-    {
-        $selector = 'div.foo';
-        $content  = 'Test class text';
 
-        $this->assertSelectEquals($selector, $content, true, $this->html);
-    }
-
-    public function testCountList()
-    {
-        $selector = 'ul > li';
-        $count    = 2;
-        $this->assertSelectCount($selector, $count, $this->html);
-    }
 
     public function testRegExpContent()
     {
-        $selector = 'div.bar';
-        $regexp   = '/Pierro/';
+        $selector = 'div.intro-lead-in';
+        $regexp   = '/Welcome/';
         $this->assertSelectRegExp($selector, $regexp, true, $this->html);
     }
 }
