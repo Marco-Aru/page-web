@@ -11,7 +11,7 @@ class IndexTest extends DOMTestCase
 
     protected function setUp()
     {
-        $this->html = file_get_contents('index.php');
+        $this->html = file_get_contents('index.html');
     }
 
     public function testTagContent()
